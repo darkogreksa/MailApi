@@ -11,6 +11,7 @@ import uns.ac.rs.MailApi.entity.Account;
 import uns.ac.rs.MailApi.entity.Contact;
 import uns.ac.rs.MailApi.entity.Tag;
 import uns.ac.rs.MailApi.entity.User;
+import uns.ac.rs.MailApi.security.model.AuthenticationRegister;
 import uns.ac.rs.MailApi.service.UserService;
 
 import java.util.ArrayList;

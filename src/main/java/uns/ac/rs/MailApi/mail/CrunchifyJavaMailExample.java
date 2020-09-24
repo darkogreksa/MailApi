@@ -36,10 +36,10 @@ public class CrunchifyJavaMailExample {
 		System.out.println("\n\n 2nd ===> get Mail Session..");
 		getMailSession = Session.getDefaultInstance(mailServerProperties, null);
 		generateMailMessage = new MimeMessage(getMailSession);
-		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress("slankamenacmilica@gmail.com"));
-		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("slankamenacmilica@gmail.com"));
+		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress("greksadarko@gmail.com"));
+		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("greksadarko@gmail.com"));
 		generateMailMessage.setSubject("Greetings from Crunchify..");
-		String emailBody = "ttttttttttTest email by Crunchify.com JavaMail API example. " + "<br><br> Regards, <br>Crunchify Admin";
+		String emailBody = "Test email by Crunchify.com JavaMail API example. " + "<br><br> Regards, <br>Crunchify Admin";
 		generateMailMessage.setContent(emailBody, "text/html");
 		System.out.println("Mail Session has been created successfully..");
  

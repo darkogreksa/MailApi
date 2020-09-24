@@ -10,6 +10,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import uns.ac.rs.MailApi.entity.User;
+import uns.ac.rs.MailApi.security.TokenHelper;
+import uns.ac.rs.MailApi.security.model.AuthenticationRequest;
+import uns.ac.rs.MailApi.security.model.UserAuthenticationToken;
 
 import java.io.IOException;
 
