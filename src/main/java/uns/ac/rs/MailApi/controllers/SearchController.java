@@ -10,10 +10,7 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.util.QueryBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import uns.ac.rs.MailApi.lucene.indexing.analysers.SerbianAnalyzer;
 import uns.ac.rs.MailApi.lucene.model.AdvancedQuery;
@@ -25,6 +22,7 @@ import uns.ac.rs.MailApi.lucene.search.ResultRetriever;
 
 @RestController
 @RequestMapping(value = "/searcher")
+@CrossOrigin(value = "*")
 public class SearchController {
 
     @PostMapping(value="/search/term", consumes="application/json")

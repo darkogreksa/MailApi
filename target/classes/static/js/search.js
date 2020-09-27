@@ -1,3 +1,5 @@
+var URL = "http://localhost:8080/";
+
 $(document).ready(function(){
 	var searchType = $('#searchType').val();
 	console.log(searchType);
@@ -18,21 +20,9 @@ $(document).ready(function(){
 		}
 	});
 
-//	$('#resultTable').on('click','td#btnDownload', function(e){
-//		e.preventDefault();
-//
-//		console.log('cliiik');
-//		download(token);
-//	});
-
-//	$('#btnDownload').click(function(event){
-//		console.log('cliik')
-//	});
-});
-
 
 function regular(){
-
+console.log('clik');
 	var value = $('#luceneQueryLanguage input[name=query]').val();
 	var field = $('#field').val();
 	var result = $('#resultTable');
@@ -45,18 +35,18 @@ function regular(){
 
 	$.ajax({
 		type: 'POST',
-		url: '/searcher/search/term',
+		url:  URL + 'searcher/search/term',
 		data: JSON.stringify(data),
 		contentType: 'application/json',
+		headers: {"Authorization": "Bearer " + localStorage.getItem("MvsToken")},
 		success: function(data){
 			console.log(data);
 			for (var i=0; i<data.length; i++){
                 $('#resultTable').append('<tr>'
                 +'<td>'+ data[i].title +'</td>'
-                +'<td>'+ data[i].author +'</td>'
-                +'<td>'+ data[i].keywords +'</td>'
-                +'<td>'+ data[i].location +'</td>'
-                +'<td>'+ data[i].highlight +'</td>'
+                +'<td>'+ data[i].sender +'</td>'
+                +'<td>'+ data[i].receiver +'</td>'
+                +'<td>'+ data[i].text +'</td>'
                 +'<td><input type="button" id="btnDownload" name="'+ file +'" onclick="download()" value="Download""/></td>'
                 +'</tr>');
             }

@@ -19,10 +19,9 @@
 <lable>Search by</lable>
 <select id="field" name="searchSelect" style="margin-left: 18px;">
     <option value="title">title</option>
-    <option value="author">author</option>
-    <option value="keyword">keyword</option>
+    <option value="sender">sender</option>
+    <option value="receiver">receiver</option>
     <option value="text">content</option>
-    <option value="language">language</option>
 </select>
 <form method="POST" id="luceneQueryLanguage">
     <input type="text" name="query" id="query" style="margin-left: 250px;width: 50%; margin-bottom: 50px;"><br>
@@ -40,9 +39,9 @@
                 <thead>
                 <tr class="filters">
                     <th><input type="text" class="form-control" placeholder="Title" disabled></th>
-                    <th><input type="text" class="form-control" placeholder="Author" disabled></th>
-                    <th><input type="text" class="form-control" placeholder="Keywords" disabled></th>
-                    <th><input type="text" class="form-control" placeholder="Filename" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="Sender" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="Receiver" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="Content" disabled></th>
                     <th><input type="text" class="form-control" placeholder="Highlight" disabled></th>
                 </tr>
                 </thead>

@@ -63,15 +63,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		// Dopusti svim korisnicima da pristupe linku za autentifikaciju i registraciju
 		http.authorizeRequests().antMatchers(HttpMethod.POST, "/authenticate").permitAll();
-		http.authorizeRequests().antMatchers(HttpMethod.POST, "/searcher/**").permitAll();
 		http.authorizeRequests().antMatchers(HttpMethod.POST, "/users/registration").permitAll();
 		// Zabrani pristup ostatku aplikacije ukoliko korisnik nije autentifikovan
-//        http.authorizeRequests().anyRequest().authenticated();
-		//http.authorizeRequests().antMatchers("/**").permitAll();
+        http.authorizeRequests().anyRequest().authenticated();
+		http.authorizeRequests().antMatchers("/**").permitAll();
 		// Za neautorizovane zahteve posalji 401 gresku
-//        http.exceptionHandling().authenticationEntryPoint(authenticationEntryLocation);
+        http.exceptionHandling().authenticationEntryPoint(authenticationEntryLocation);
         // presretni svaki zahtev filterom
-//        http.addFilterBefore(new AuthenticationFilter(tokenHelper, userService), BasicAuthenticationFilter.class);
+        http.addFilterBefore(new AuthenticationFilter(tokenHelper, userService), BasicAuthenticationFilter.class);
         // enable cors
         http.cors();
 
@@ -86,7 +85,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //        );
 		web.ignoring().antMatchers(HttpMethod.POST, "/authenticate");
 		web.ignoring().antMatchers(HttpMethod.POST, "/users/registration");
-		web.ignoring().antMatchers(HttpMethod.POST, "/searcher/**");
         web.ignoring().antMatchers(
                 HttpMethod.GET,
                 "/",

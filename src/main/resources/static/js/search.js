@@ -1,3 +1,5 @@
+var URL = "http://localhost:8080/";
+
 $(document).ready(function(){
 	var searchType = $('#searchType').val();
 	console.log(searchType);
@@ -18,21 +20,9 @@ $(document).ready(function(){
 		}
 	});
 
-//	$('#resultTable').on('click','td#btnDownload', function(e){
-//		e.preventDefault();
-//
-//		console.log('cliiik');
-//		download(token);
-//	});
-
-//	$('#btnDownload').click(function(event){
-//		console.log('cliik')
-//	});
-});
-
 
 function regular(){
-
+console.log('clik');
 	var value = $('#luceneQueryLanguage input[name=query]').val();
 	var field = $('#field').val();
 	var result = $('#resultTable');
@@ -45,19 +35,18 @@ function regular(){
 
 	$.ajax({
 		type: 'POST',
-		url: '/searcher/search/term',
+		url:  URL + 'searcher/search/term',
 		data: JSON.stringify(data),
 		contentType: 'application/json',
+		headers: {"Authorization": "Bearer " + localStorage.getItem("MvsToken")},
 		success: function(data){
 			console.log(data);
 			for (var i=0; i<data.length; i++){
                 $('#resultTable').append('<tr>'
                 +'<td>'+ data[i].title +'</td>'
-                +'<td>'+ data[i].author +'</td>'
-                +'<td>'+ data[i].keywords +'</td>'
-                +'<td>'+ data[i].location +'</td>'
-                +'<td>'+ data[i].highlight +'</td>'
-                +'<td><input type="button" id="btnDownload" name="'+ file +'" onclick="download()" value="Download""/></td>'
+                +'<td>'+ data[i].sender +'</td>'
+                +'<td>'+ data[i].receiver +'</td>'
+                +'<td>'+ data[i].text +'</td>'
                 +'</tr>');
             }
 		},
@@ -145,34 +134,6 @@ function fuzzy(){
 
         }
 	});
+
 }
-
-function download(){
-	console.log('cliik');
-	 var fi = localStorage.getItem('f');
-     var splited = fi.split('files\\');
-     var splitedFile = splited[1].split('.');
-     var file = splitedFile[0];
-     var xhr = new XMLHttpRequest();
-     xhr.open('GET', '/api/index/download/' + file, true);
-     console.log(file);
-     xhr.responseType = 'blob';
-
-
-		xhr.onload = function(e) {
-			if (this.status == 200) {
-				var blob = this.response;
-				console.log(blob);
-				var a = document.createElement('a');
-				var url = window.URL.createObjectURL(blob);
-				a.href = url;
-				a.download = xhr.getResponseHeader('filename');
-				a.click();
-				window.URL.revokeObjectURL(url);
-			}
-
-		};
-
-
-     xhr.send();
-}
+});

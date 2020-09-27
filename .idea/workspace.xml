@@ -23,35 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a2fc145-fc1d-419f-8b74-b962819cecf1" name="Default Changelist" comment="res folder">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/IndexerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/IndexerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/dto/MessageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/dto/MessageDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/IndexUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/IndexUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/IndexerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/IndexerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/dto/MessageDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/dto/MessageDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/IndexUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/IndexUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/SearchController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/security/WebSecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,22 +152,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="444" y="65" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1601211419547" />
-    <state width="1323" height="230" key="GridCell.Tab.0.bottom" timestamp="1601214163124">
+    <state width="1323" height="174" key="GridCell.Tab.0.bottom" timestamp="1601215657180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601214163124" />
-    <state width="1323" height="230" key="GridCell.Tab.0.center" timestamp="1601214163124">
+    <state width="1323" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601215657180" />
+    <state width="1323" height="174" key="GridCell.Tab.0.center" timestamp="1601215657180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601214163124" />
-    <state width="1323" height="230" key="GridCell.Tab.0.left" timestamp="1601214163124">
+    <state width="1323" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601215657180" />
+    <state width="1323" height="174" key="GridCell.Tab.0.left" timestamp="1601215657180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601214163124" />
-    <state width="1323" height="230" key="GridCell.Tab.0.right" timestamp="1601214163124">
+    <state width="1323" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601215657180" />
+    <state width="1323" height="174" key="GridCell.Tab.0.right" timestamp="1601215657180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601214163124" />
+    <state width="1323" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601215657180" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1601214370050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
