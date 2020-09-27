@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<title>Update rule</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/updateRule.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		 <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container ">
+                 
+                  <ul class="nav navbar-nav navbar-right">
+                  
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="backFolder">Back</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="logoutButton">LOGOUT<span class="glyphicon glyphicon-log-out"></span></button></li>
+                  </ul>
+                </div>
+        </nav>
+		
+			<input type="text" id="value">
+			
+			<select id = "operation">
+				<option value = "MOVE">MOVE</option>
+				<option value = "COPY">COPY</option>
+				<option value = "DELETE">DELETE</option>
+			</select>
+			
+			<select id = "condition">
+				<option value = "TO">TO</option>
+				<option value = "FROM">FROM</option>
+				<option value = "CC">CC</option>
+				<option value = "SUBJECT">SUBJECT</option>
+			</select>
+		
+		</div>
+		
+		<button id = "updateButton">Update</button>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+#container {
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}

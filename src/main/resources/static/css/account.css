@@ -1,0 +1,35 @@
+html,
+body {
+  background: #efefef;
+  padding: 10px;
+  font-family: 'Varela Round';
+}
+.logo {
+  padding: 15px 0;
+  font-size: 25px;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+#but {
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}
