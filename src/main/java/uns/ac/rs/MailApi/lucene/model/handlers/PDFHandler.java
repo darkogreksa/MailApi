@@ -36,17 +36,10 @@ public class PDFHandler extends DocumentHandler {
             String title = ""+info.getTitle();
             retVal.setTitle(title);
 
-
-            String keywords = ""+info.getKeywords();
-            if(keywords != null){
-                String[] splittedKeywords = keywords.split(" ");
-                retVal.setKeywords(new ArrayList<String>(Arrays.asList(splittedKeywords)));
-            }
-
-            retVal.setFilename(file.getCanonicalPath());
+//            retVal.setFilename(file.getCanonicalPath());
 
             String modificationDate=DateTools.dateToString(new Date(file.lastModified()),DateTools.Resolution.DAY);
-            retVal.setFiledate(modificationDate);
+//            retVal.setFiledate(modificationDate);
 
             pdf.close();
         } catch (IOException e) {
@@ -95,10 +88,10 @@ public class PDFHandler extends DocumentHandler {
 			retVal.setTitle(title);
 			
 			String keywords = "" + information.getKeywords();
-			retVal.setKeywords(keywords);
+//			retVal.setKeywords(keywords);
 			String author = "" + information.getAuthor();
-			retVal.setAuthor(author);
-			retVal.setFilename(file.getCanonicalPath());
+//			retVal.setAuthor(author);
+//			retVal.setFilename(file.getCanonicalPath());
 			
 			pdf.close();
 		} catch (Exception e) {

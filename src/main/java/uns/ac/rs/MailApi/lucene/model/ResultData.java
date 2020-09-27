@@ -2,25 +2,24 @@ package uns.ac.rs.MailApi.lucene.model;
 
 public class ResultData {
 
-    private String title;
-    private String author;
-    private int category;
-    private String keywords;
-    private String location;
-    private String highlight;
+	private String title;
+	private String sender;
+	private String receiver;
+	private String text;
+	private String pdf;
 
     public ResultData() {
         super();
     }
 
-    public ResultData(String title, String author, int category, String keywords, String location, String highlight) {
-        this.title = title;
-        this.author = author;
-        this.category = category;
-        this.keywords = keywords;
-        this.location = location;
-        this.highlight = highlight;
-    }
+	public ResultData(String title, String sender, String receiver, String text, String pdf) {
+		super();
+		this.title = title;
+		this.sender = sender;
+		this.receiver = receiver;
+		this.text = text;
+		this.pdf = pdf;
+	}
 
 	public String getTitle() {
 		return title;
@@ -30,44 +29,37 @@ public class ResultData {
 		this.title = title;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getSender() {
+		return sender;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setSender(String sender) {
+		this.sender = sender;
 	}
 
-	public int getCategory() {
-		return category;
+	public String getReceiver() {
+		return receiver;
 	}
 
-	public void setCategory(int category) {
-		this.category = category;
+	public void setReceiver(String receiver) {
+		this.receiver = receiver;
 	}
 
-	public String getKeywords() {
-		return keywords;
+	public String getText() {
+		return text;
 	}
 
-	public void setKeywords(String keywords) {
-		this.keywords = keywords;
+	public void setText(String text) {
+		this.text = text;
 	}
 
-	public String getLocation() {
-		return location;
+	public String getPdf() {
+		return pdf;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setPdf(String pdf) {
+		this.pdf = pdf;
 	}
 
-	public String getHighlight() {
-		return highlight;
-	}
-
-	public void setHighlight(String highlight) {
-		this.highlight = highlight;
-	}
-
+    
 }

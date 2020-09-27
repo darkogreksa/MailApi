@@ -67,31 +67,25 @@ public class ResultRetriever {
 
             for (ScoreDoc sd : hits) {
                 doc = is.doc(sd.doc);
-                String[] allKeywords = doc.getValues("keyword");
-                String keywords = "";
-                for (String keyword : allKeywords) {
-                    keywords += keyword.trim() + " ";
-                }
-                keywords = keywords.trim();
                 String title = doc.get("title");
-                String location = doc.get("filename");
-                String author = doc.get("author");
-                int category = Integer.parseInt(doc.get("category"));
-                System.out.println("AUTHOR I TITLE" + author + title + keywords.toString());
+                String sender = doc.get("sender");
+                String receiver = doc.get("receiver");
+                String text = doc.get("text");
+                String pdf = doc.get("pdf");
+//                int category = Integer.parseInt(doc.get("category"));
 //                Integer year = Integer.parseInt(doc.get("year").trim());
                 
-                String highlight = "";
-                for (RequiredHighlight rh : requiredHighlights) {
-                    hl = new Highlighter(new QueryScorer(query, reader, rh.getFieldName()));
-                    try{
-                        highlight += hl.getBestFragment(sa, rh.getFieldName(),
-                                "" + getDocumentText(location));
-                    }catch (InvalidTokenOffsetsException e) {
-                        //throw new IllegalArgumentException("Unable to make highlight");
-                    }
-                }
-                rd = new ResultData(title,author,category, keywords, location,
-                        highlight);
+//                String highlight = "";
+//                for (RequiredHighlight rh : requiredHighlights) {
+//                    hl = new Highlighter(new QueryScorer(query, reader, rh.getFieldName()));
+//                    try{
+//                        highlight += hl.getBestFragment(sa, rh.getFieldName(),
+//                                "" + getDocumentText(location));
+//                    }catch (InvalidTokenOffsetsException e) {
+//                        //throw new IllegalArgumentException("Unable to make highlight");
+//                    }
+//                }
+                rd = new ResultData(title,sender,receiver, text, pdf);
                 results.add(rd);
             }
             reader.close();

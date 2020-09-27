@@ -12,92 +12,60 @@ import org.apache.lucene.document.Field.Store;
 
 public class IndexUnit {
 
-    private String text;
-    private String title;
-    private List<String> keywords = new ArrayList<String>();
-    private String filename;
-    private String filedate;
-    private Integer publicationYear;
-    private String author;
-    private String MIME;
-    private int category;
+   private String title;
+   private String sender;
+   private String receiver;
+   private String text;
+   private String pdf;
 
-    public String getText() {
-        return text;
-    }
-    public void setText(String text) {
-        this.text = text;
-    }
     public String getTitle() {
-        return title;
-    }
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    public List<String> getKeywords() {
-        return keywords;
-    }
-    public void setKeywords(List<String> keywords) {
-        this.keywords = keywords;
-    }
-    public String getFilename() {
-        return filename;
-    }
-    public void setFilename(String filename) {
-        this.filename = filename;
-    }
-    public String getFiledate() {
-        return filedate;
-    }
-    public void setFiledate(String filedate) {
-        this.filedate = filedate;
-    }
+	return title;
+}
 
-    public Integer getPublicationYear() {
-        return publicationYear;
-    }
+public void setTitle(String title) {
+	this.title = title;
+}
 
-    public void setPublicationYear(Integer publicationYear) {
-        this.publicationYear = publicationYear;
-    }
+public String getSender() {
+	return sender;
+}
 
-    public String getAuthor() {
-        return author;
-    }
+public void setSender(String sender) {
+	this.sender = sender;
+}
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+public String getReceiver() {
+	return receiver;
+}
 
-    public String getMIME() {
-        return MIME;
-    }
+public void setReceiver(String receiver) {
+	this.receiver = receiver;
+}
 
-    public void setMIME(String MIME) {
-        this.MIME = MIME;
-    }
+public String getText() {
+	return text;
+}
 
-    public int getCategory() {
-        return category;
-    }
+public void setText(String text) {
+	this.text = text;
+}
 
-    public void setCategory(int category) {
-        this.category = category;
-    }
+public String getPdf() {
+	return pdf;
+}
 
+public void setPdf(String pdf) {
+	this.pdf = pdf;
+}
 
-
-    public Document getLuceneDocument(){
+	public Document getLuceneDocument(){
         Document retVal = new Document();
-        retVal.add(new TextField("text", text, Store.YES));
         retVal.add(new TextField("title", title, Store.YES));
-        for (String keyword : keywords) {
-            retVal.add(new TextField("keyword", keyword, Store.YES));
-        }
-        retVal.add(new StringField("filename", filename, Store.YES));
+        retVal.add(new TextField("sender", sender, Store.YES));
+        retVal.add(new StringField("receiver", receiver, Store.YES));
 //        retVal.add(new TextField("filedate",filedate,Store.YES));
-        retVal.add(new TextField("author", author, Store.YES));
-        retVal.add(new LegacyIntField("category",category, Store.YES));
+        retVal.add(new TextField("text", text, Store.YES));
+        retVal.add(new TextField("pdf",pdf, Store.YES));
         return retVal;
     }
 

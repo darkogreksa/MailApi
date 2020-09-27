@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import uns.ac.rs.MailApi.entity.Message;
 import uns.ac.rs.MailApi.lucene.Indexer;
 import uns.ac.rs.MailApi.lucene.model.IndexUnit;
 import uns.ac.rs.MailApi.lucene.model.UploadModel;
@@ -129,10 +130,10 @@ public class IndexerController {
             if(fileName != null){
                 IndexUnit indexUnit = Indexer.getInstance().getHandler(fileName).getIndexUnit(new File(fileName));
                 indexUnit.setTitle(model.getTitle());
-                indexUnit.setAuthor(model.getAuthor());
-                System.out.println("AUTOOOOOOOOR" + model.getAuthor());
-                indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
-                indexUnit.setCategory(model.getCategory());
+                indexUnit.setText(model.getText());
+                indexUnit.setReceiver(model.getReceiver());
+//                indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
+                indexUnit.setSender(model.getSender());
 //                indexUnit.setLanguage(model.getLanguage());
                 Indexer.getInstance().add(indexUnit.getLuceneDocument());
 
@@ -149,24 +150,24 @@ public class IndexerController {
         }
     }
 
-    @PutMapping(value="/index/update/{filename}")
-    public ResponseEntity<UploadModel> update(@RequestBody UploadModel model, @PathVariable("filename") String filename){
-    	String path = getResourceFilePath(DATA_DIR_PATH).getAbsolutePath() + "\\" + filename + ".pdf";
-    	IndexUnit indexUnit = Indexer.getInstance().getHandler(path).getIndexUnit(new File(path));
-    	
-    	indexUnit.setTitle(model.getTitle());
-    	indexUnit.setAuthor(model.getAuthor());
-    	indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
-//    	indexUnit.setLanguage(model.getLanguage());
-    	indexUnit.setCategory(model.getCategory());
-    	
-    	List<IndexableField> fields = new ArrayList<IndexableField>(Arrays.asList(indexUnit.getLuceneDocument().getField("title"),
-    			indexUnit.getLuceneDocument().getField("author"), indexUnit.getLuceneDocument().getField("keyword"), indexUnit.getLuceneDocument().getField("language"), indexUnit.getLuceneDocument().getField("category")));
-    	
-    	Indexer.getInstance().updateDocument(path, fields);
-    	
-    	return new ResponseEntity<UploadModel>(model, HttpStatus.OK);
-    }
+//    @PutMapping(value="/index/update/{filename}")
+//    public ResponseEntity<UploadModel> update(@RequestBody UploadModel model, @PathVariable("filename") String filename){
+//    	String path = getResourceFilePath(DATA_DIR_PATH).getAbsolutePath() + "\\" + filename + ".pdf";
+//    	IndexUnit indexUnit = Indexer.getInstance().getHandler(path).getIndexUnit(new File(path));
+//    	
+//    	indexUnit.setTitle(model.getTitle());
+//    	indexUnit.setAuthor(model.getAuthor());
+//    	indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
+////    	indexUnit.setLanguage(model.getLanguage());
+//    	indexUnit.setCategory(model.getCategory());
+//    	
+//    	List<IndexableField> fields = new ArrayList<IndexableField>(Arrays.asList(indexUnit.getLuceneDocument().getField("title"),
+//    			indexUnit.getLuceneDocument().getField("author"), indexUnit.getLuceneDocument().getField("keyword"), indexUnit.getLuceneDocument().getField("language"), indexUnit.getLuceneDocument().getField("category")));
+//    	
+//    	Indexer.getInstance().updateDocument(path, fields);
+//    	
+//    	return new ResponseEntity<UploadModel>(model, HttpStatus.OK);
+//    }
     
     
     @GetMapping(value="/index/download/{filename}")
