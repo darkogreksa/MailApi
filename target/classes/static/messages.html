@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<title>EMAILS</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/messages.js"></script>
+		
+	</head>
+	<body>		
+		<div id="container">
+		 <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container ">
+                 
+                  <ul class="nav navbar-nav navbar-right">
+                  
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="create">Create Email</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="contacts">Contacts</span></button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="folders">Folders</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="back">Back</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="logoutButton">LOGOUT<span class="glyphicon glyphicon-log-out"></span></button></li>
+                  </ul>
+                </div>
+        </nav>
+	
+			<h1>My mails</h1>
+			
+			<select class="sel form-control" id="sorting">
+				<option value="subject">subject</option>
+				<option value="from">from</option>
+				<option value="date">date</option>
+			</select>
+			
+			<select class="sel form-control" id="ascDesc">
+				<option value = "asc">asc</option>
+				<option value = "desc">desc</option>
+			</select>
+			
+			
+			<div id="search">
+				<input type="text" class="form-control" id="searchInput" placeholder="Search">
+				<button class="btn btn-lg pull-center boja" id="sort">Sort</button>
+			<button class="btn btn-lg pull-center boja" id="sync">Refresh</button>
+				<button class="btn btn-lg pull-center boja" id="searchButton">Search</button>
+				<button class="btn btn-lg pull-center boja" id="reload">Reload</button><br><br><br>
+			</div>
+			<div id="messages">
+			
+			</div>
+		</div>
+	</body>
+</html>

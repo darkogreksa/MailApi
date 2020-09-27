@@ -1,0 +1,17 @@
+html,
+body {
+  background: #efefef;
+  padding: 10px;
+  font-family: 'Varela Round';
+}
+#container {
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}

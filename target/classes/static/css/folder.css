@@ -1,0 +1,44 @@
+html,
+body {
+  background: #efefef;
+  padding: 10px;
+  font-family: 'Varela Round';
+}
+.logo {
+  padding: 15px 0;
+  font-size: 25px;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+#container {
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#subfolders {
+	margin-top: 10px;
+}
+a {
+  color: #aaaaaa;
+  transition: all ease-in-out 200ms;
+  font-size: 27px;
+}
+a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+
+.subfolder {
+	display: block;
+	border: 5px solid black;
+}
+
+#messages {
+	margin-top: 10px;
+}
+
+.message {
+	display: block;
+	border: 5px solid black;
+}

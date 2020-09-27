@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+	<title>Contacts</title>
+	<link rel="stylesheet" type="text/css" href="css/contacts.css"/>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/contacts.js"></script>
+</head>
+
+<body>
+	<div id = "container">
+		
+	 <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container ">
+                 
+                  <ul class="nav navbar-nav navbar-right">
+                  
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="backFolder">Back</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="logoutButton">LOGOUT<span class="glyphicon glyphicon-log-out"></span></button></li>
+                  </ul>
+                </div>
+        </nav>
+        <div class="container-fluid tabela">           
+    <table id="adminTabela" class="table table-hover boja">
+      <thead>
+        <tr>
+            <th > DISPLAYNAME</th>
+            <th > EMAIL</th>
+            
+            
+        </tr>
+      
+      </thead>
+     
+    </table>
+    
+  </div>
+			<div id="contacts_details">
+				<h1> Contact details </h1>
+				<p> First name </p>
+				<input type="text" name="firstNameInput">
+				<p> Last  name </p>
+				<input type="text" name="lastNameInput">
+				<p> Display name </p>
+				<input type="text" name="displayNameInput">
+				<p> Email </p>
+				<input type="email" name="emailInput">
+				<p> Note </p>
+				<input type="text" name="noteInput">
+				<p><a href="photo.html"> Show/Upload photo</a> </p>
+			</div>
+
+		<button id="confirm_button_contact"/>
+		<button id="delete_contact"> Delete contact </button>
+</div>
+<div id="contacts">
+			
+			</div>
+
+</body>
+</html>

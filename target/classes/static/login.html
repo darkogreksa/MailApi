@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="css/login.css">
+<script src="js/login.js"></script>
+<!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /-->
+
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">login</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="login-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label class="sr-only">Username</label>
+						<input type="text" class="form-control" id="email" name="lg_username" placeholder="username">
+						<label id="greska"></label>
+					</div>
+					<div class="form-group">
+						<label class="sr-only">Password</label>
+						<input type="password" class="form-control" id="password" name="lg_password" placeholder="password">
+						<label id="greska1"></label>
+					</div>
+					
+				</div>
+				<button type="button" class="login-button" id="log"><i class="fa fa-chevron-right"></i>Login</button>
+			</div>
+			
+		</form>
+	</div>
+</div>
+
+<!-- REGISTRATION FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">register</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="register-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Username</label>
+						<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+						<label id="greska2"></label>
+					</div>
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+						<label id="greska3"></label>
+					</div>
+					
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">First Name</label>
+						<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="first name">
+						<label id="greska5"></label>
+					</div>
+					<div class="form-group">
+						<label for="reg_lastname" class="sr-only">Last Name</label>
+						<input type="text" class="form-control" id="reg_lastfullname" name="reg_lastname" placeholder="last name">
+						<label id="greska6"></label>
+					</div>
+					
+					
+				</div>
+				<button type="button" class="login-button" id="register"><i class="fa fa-chevron-right"></i>Register</button>
+			</div>
+			
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+
