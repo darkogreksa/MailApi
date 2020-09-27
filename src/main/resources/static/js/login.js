@@ -6,7 +6,6 @@ var email;
 var password;
 
 $(document).ready(function() {
-
 	signInButton = $("#log");
 	email = $("#email");
 	password = $("#password");
@@ -81,10 +80,10 @@ $(document).ready(function() {
 
 		  
 	  });
-})
+});
 
 function login(){
-	
+    console.log('dasihdlasjhdjklas');
 	signInButton.click(function(){
 		console.log('flsajkldf00');
 		var data = {

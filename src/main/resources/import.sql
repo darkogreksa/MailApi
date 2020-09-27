@@ -16,9 +16,9 @@ INSERT INTO folders (name, parent_folder, account) VALUES ("Spam", 1, 1);
 --INSERT INTO rules (rule_condition, rule_operation, value, folder) VALUES (1, 1, "mvsuseeer", 4);
 --INSERT INTO rules (rule_condition, rule_operation, value, folder) VALUES (1, 0, "mvsuser3@gmail.com", 5);
 
-INSERT INTO folders (name, parent_folder, account) VALUES ("Inbox", null, 2);
-INSERT INTO folders (name, parent_folder, account) VALUES ("Outbox", null, 2);
-INSERT INTO folders (name, parent_folder, account) VALUES ("Drafts", null, 2);
+INSERT INTO folders (name, parent_folder, account) VALUES ("Inbox", null, 0);
+INSERT INTO folders (name, parent_folder, account) VALUES ("Outbox", null, 0);
+INSERT INTO folders (name, parent_folder, account) VALUES ("Drafts", null, 0);
 
 INSERT INTO contacts (display_name, email, first_name, last_name, note, user) VALUES ("Milica", "slankamenacmilica@gmail.com", "Milica", "Slankamenac", "Test", 2);
 INSERT INTO contacts (display_name, email, first_name, last_name, note, user) VALUES ("Vukasin", "jovanovicvukasin99@gmail.com", "Vukasin", "Jovanovic", "Test", 1);

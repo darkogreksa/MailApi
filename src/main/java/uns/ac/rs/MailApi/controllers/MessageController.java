@@ -4,17 +4,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import uns.ac.rs.MailApi.common.MoveMessageRequest;
 import uns.ac.rs.MailApi.dto.AttachmentDTO;
 import uns.ac.rs.MailApi.dto.MessageDTO;
 import uns.ac.rs.MailApi.dto.TagDTO;
 import uns.ac.rs.MailApi.entity.*;
+import uns.ac.rs.MailApi.lucene.Indexer;
+import uns.ac.rs.MailApi.lucene.model.IndexUnit;
 import uns.ac.rs.MailApi.mail.MailAPI;
 import uns.ac.rs.MailApi.service.AccountService;
 import uns.ac.rs.MailApi.service.FolderService;
 import uns.ac.rs.MailApi.service.MessageService;
 import uns.ac.rs.MailApi.service.UserService;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.Principal;
 import java.sql.Timestamp;
 import java.util.*;
@@ -23,6 +33,13 @@ import java.util.*;
 @RestController
 @RequestMapping("acc/{index}/messages")
 public class MessageController {
+
+    private static String DATA_DIR_PATH;
+
+    static {
+        ResourceBundle rb=ResourceBundle.getBundle("application");
+        DATA_DIR_PATH=rb.getString("dataDir");
+    }
 
     @Autowired
     private MailAPI mailAPI;
@@ -195,6 +212,29 @@ public class MessageController {
             @PathVariable("index") int accountIndex,
             @RequestBody MessageDTO messageDTO,
             Principal principal) {
+
+        System.out.println("DA LI VAMO ULAZIS " + accountIndex + " " + messageDTO.toString() );
+//        String fileName = null;
+//        try {
+////            fileName = saveUploadedFile(messageDTO);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("indeks");
+//        IndexUnit indexUnit = Indexer.getInstance().getHandler(fileName).getIndexUnit(new File(fileName));
+        IndexUnit indexUnit = new IndexUnit();
+        indexUnit.setTitle(messageDTO.getSubject());
+        indexUnit.setText(messageDTO.getContent());
+        indexUnit.setReceiver(messageDTO.getTo().get(0).getEmail());
+//                indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
+        indexUnit.setSender(messageDTO.getContent());
+//                indexUnit.setLanguage(model.getLanguage());
+        Indexer.getInstance().add(indexUnit.getLuceneDocument());
+
+
+
+
+
         // ----- Request data validation -----
         if (accountIndex < 0)
             return new ResponseEntity<>("You must provide an ID for an account!", HttpStatus.BAD_REQUEST);
@@ -222,6 +262,12 @@ public class MessageController {
         message.setCc(MessageDTO.contactsToString(messageDTO.getCc()));
         message.setBcc(MessageDTO.contactsToString(messageDTO.getBcc()));
 
+
+
+
+
+
+        System.out.println("izasao");
         ArrayList<Attachment> attachments = new ArrayList<Attachment>();
 
         if (messageDTO.getAttachments().size() > 0) {
@@ -262,13 +308,45 @@ public class MessageController {
         message.setFolder(folder);
         message.setUnread(true);
 
+
+
+
         // ----- Attempt to send an e-mail -----
         if (mailAPI.sendMessage(message)) {
             // ----- Saving to database -----
+
+
+
+
             message = messageService.save(message);
             return new ResponseEntity<MessageDTO>(new MessageDTO(message), HttpStatus.OK);
         } else
             return new ResponseEntity<MessageDTO>(new MessageDTO(message), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+//    private String saveUploadedFile(MessageDTO file) throws IOException {
+//        String retVal = null;
+////        File files = new File();
+////        if (! file.isEmpty()) {
+//            byte[] bytes = file.toString().getBytes();
+//            System.out.println("bytes " + bytes + DATA_DIR_PATH);
+//            Path path = Paths.get(getResourceFilePath(DATA_DIR_PATH).getAbsolutePath());
+//            Files.write(path, bytes);
+//            retVal = path.toString();
+//            System.out.println("FILEE JEBENI " + path);
+////        }
+//        return retVal;
+//    }
+
+    private File getResourceFilePath(String path) {
+        URL url = this.getClass().getClassLoader().getResource(path);
+        File file = null;
+        try {
+            file = new File(url.toURI());
+        } catch (URISyntaxException e) {
+            file = new File(url.getPath());
+        }
+        return file;
     }
 
     @PostMapping("/draft")

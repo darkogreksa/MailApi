@@ -182,5 +182,22 @@ public class MessageDTO {
         this.bcc = bcc;
     }
 
+    @Override
+    public String toString() {
+        return "MessageDTO{" +
+                "id=" + id +
+                ", from=" + from +
+                ", to=" + to +
+                ", cc=" + cc +
+                ", bcc=" + bcc +
+                ", dateTime=" + dateTime +
+                ", subject='" + subject + '\'' +
+                ", content='" + content + '\'' +
+                ", unread=" + unread +
+                ", folder=" + folder +
+                ", attachments=" + attachments +
+                ", tags=" + tags +
+                '}';
+    }
 }
 

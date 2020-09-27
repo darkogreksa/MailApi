@@ -137,6 +137,13 @@ public class IndexerController {
 //                indexUnit.setLanguage(model.getLanguage());
                 Indexer.getInstance().add(indexUnit.getLuceneDocument());
 
+
+                Message message = new Message();
+                message.setSubject(model.getTitle());
+                message.setContent(model.getText());
+                message.setFrom(model.getSender());
+                message.setTo(model.getReceiver());
+
 //                eBook eBook = new eBook();
 //
 //                eBook.setTitle(model.getTitle());

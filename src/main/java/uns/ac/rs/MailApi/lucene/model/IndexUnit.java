@@ -65,7 +65,7 @@ public void setPdf(String pdf) {
         retVal.add(new StringField("receiver", receiver, Store.YES));
 //        retVal.add(new TextField("filedate",filedate,Store.YES));
         retVal.add(new TextField("text", text, Store.YES));
-        retVal.add(new TextField("pdf",pdf, Store.YES));
+//        retVal.add(new TextField("pdf",pdf, Store.YES));
         return retVal;
     }
 

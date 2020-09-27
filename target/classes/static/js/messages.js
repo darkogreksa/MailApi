@@ -46,12 +46,19 @@ $(document).ready(function(){
 		  
 	});
 	$("#folders").click(function(event){
-		
-		
+
+
 		window.location='folder.html';
-		
-		  
+
+
 	});
+	$("#searchMail").click(function(event){
+
+
+    		window.location='search.html';
+
+
+    	});
 	$("#back").click(function(event){
 		
 		
