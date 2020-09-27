@@ -48,13 +48,16 @@ public class ResultRetriever {
             return null;
         }
         try {
+            System.out.println("DA LI ULAZIS");
             Directory indexDir = new SimpleFSDirectory(FileSystems.getDefault().getPath(ResourceBundle
                     .getBundle("application").getString("index")));
+            System.out.println("VAMOOOOOO 1" + indexDir);
             DirectoryReader reader = DirectoryReader.open(indexDir);
             IndexSearcher is = new IndexSearcher(reader);
+            System.out.println("VAMOOOOOO 3" + is.toString() + "   " + reader.toString());
             TopScoreDocCollector collector = TopScoreDocCollector.create(
                     maxHits);
-
+            System.out.println("VAMOOOOOO 2" + collector.toString());
             List<ResultData> results = new ArrayList<ResultData>();
 
             is.search(query, collector);
@@ -64,29 +67,45 @@ public class ResultRetriever {
             Document doc;
             Highlighter hl;
             SerbianAnalyzer sa = new SerbianAnalyzer();
-
+            System.out.println("VAMOOOOOO 4" + hits.toString());
             for (ScoreDoc sd : hits) {
+                System.out.println("VAMOOOOOO 5");
                 doc = is.doc(sd.doc);
+                System.out.println("AAA 1");
                 String title = doc.get("title");
                 String sender = doc.get("sender");
                 String receiver = doc.get("receiver");
                 String text = doc.get("text");
                 String pdf = doc.get("pdf");
+                System.out.println(" CCCC  2");
+                String contactName = doc.get("contactName");
+                String contactLastName = doc.get("contactLastName");
+                String contactNote = doc.get("contactNote");
 //                int category = Integer.parseInt(doc.get("category"));
 //                Integer year = Integer.parseInt(doc.get("year").trim());
                 
-//                String highlight = "";
-//                for (RequiredHighlight rh : requiredHighlights) {
-//                    hl = new Highlighter(new QueryScorer(query, reader, rh.getFieldName()));
-//                    try{
-//                        highlight += hl.getBestFragment(sa, rh.getFieldName(),
-//                                "" + getDocumentText(location));
-//                    }catch (InvalidTokenOffsetsException e) {
-//                        //throw new IllegalArgumentException("Unable to make highlight");
-//                    }
-//                }
-                rd = new ResultData(title,sender,receiver, text, pdf);
-                results.add(rd);
+                String highlight = "";
+                for (RequiredHighlight rh : requiredHighlights) {
+                    hl = new Highlighter(new QueryScorer(query, reader, rh.getFieldName()));
+                    try{
+                        highlight += hl.getBestFragment(sa, rh.getFieldName(),
+                                "");
+                    }catch (InvalidTokenOffsetsException e) {
+                        //throw new IllegalArgumentException("Unable to make highlight");
+                    }
+                }
+                if (title != null ){
+                    System.out.println(" BBBB  3");
+                    rd = new ResultData(title,sender,receiver, text, pdf);
+                    System.out.println("neki " + rd.toString());
+                    results.add(rd);
+                } else {
+                    System.out.println("ovde ce");
+                    rd = new ResultData(contactName, contactLastName, contactNote);
+                    results.add(rd);
+                    System.out.println("rd  " + rd.toString() + "   " + results.toString());
+                }
+
             }
             reader.close();
             return results;

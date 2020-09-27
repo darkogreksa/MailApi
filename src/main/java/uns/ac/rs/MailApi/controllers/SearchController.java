@@ -3,6 +3,7 @@ package uns.ac.rs.MailApi.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
@@ -12,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import uns.ac.rs.MailApi.common.Logger;
 import uns.ac.rs.MailApi.lucene.indexing.analysers.SerbianAnalyzer;
 import uns.ac.rs.MailApi.lucene.model.AdvancedQuery;
 import uns.ac.rs.MailApi.lucene.model.RequiredHighlight;

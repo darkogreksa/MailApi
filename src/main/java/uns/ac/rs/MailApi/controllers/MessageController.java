@@ -214,26 +214,15 @@ public class MessageController {
             Principal principal) {
 
         System.out.println("DA LI VAMO ULAZIS " + accountIndex + " " + messageDTO.toString() );
-//        String fileName = null;
-//        try {
-////            fileName = saveUploadedFile(messageDTO);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        System.out.println("indeks");
-//        IndexUnit indexUnit = Indexer.getInstance().getHandler(fileName).getIndexUnit(new File(fileName));
+
         IndexUnit indexUnit = new IndexUnit();
         indexUnit.setTitle(messageDTO.getSubject());
         indexUnit.setText(messageDTO.getContent());
         indexUnit.setReceiver(messageDTO.getTo().get(0).getEmail());
-//                indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
         indexUnit.setSender(messageDTO.getContent());
-//                indexUnit.setLanguage(model.getLanguage());
+        indexUnit.setPdf(messageDTO.getSubject());
         Indexer.getInstance().add(indexUnit.getLuceneDocument());
-
-
-
-
+        System.out.println(indexUnit.toString());
 
         // ----- Request data validation -----
         if (accountIndex < 0)

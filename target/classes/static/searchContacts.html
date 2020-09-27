@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/contactSearch.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+<label style="margin-top: 22px;">Search type</label>
+<select id="searchType" name="searchType">
+    <option value="regluar">Regular</option>
+    <option value="phrase">Phrase</option>
+    <option value="fuzzy">Fuzzy</option>
+    <option value="boolean">Boolean</option>
+</select>
+<br>
+<lable>Search by</lable>
+<select id="field" name="searchSelect" style="margin-left: 18px;">
+    <option value="contactName">Name</option>
+    <option value="contactLastName">Last name</option>
+    <option value="contactNote">Note</option>
+</select>
+<form method="POST" id="luceneQueryLanguage">
+    <input type="text" name="query" id="query" style="margin-left: 250px;width: 50%; margin-bottom: 50px;"><br>
+    <input type="submit" value="Submit" id="btnSubmitLuceneQueryLanguage" style="float: right;margin-right: 365px;margin-top: -76px;">
+</form>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">Books</h3>
+                <div class="pull-right">
+                </div>
+            </div>
+            <table id="resultTable">
+                <thead>
+                <tr class="filters">
+                    <th><input type="text" class="form-control" placeholder="First name" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="Last name" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="Note" disabled></th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

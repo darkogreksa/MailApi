@@ -56,9 +56,14 @@ $(document).ready(function(){
 
 
     		window.location='search.html';
-
-
     	});
+
+   	$("#searchContact").click(function(event){
+
+       		window.location='searchContacts.html';
+
+        });
+
 	$("#back").click(function(event){
 		
 		

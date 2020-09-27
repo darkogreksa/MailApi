@@ -43,10 +43,9 @@ console.log('clik');
 			console.log(data);
 			for (var i=0; i<data.length; i++){
                 $('#resultTable').append('<tr>'
-                +'<td>'+ data[i].title +'</td>'
-                +'<td>'+ data[i].sender +'</td>'
-                +'<td>'+ data[i].receiver +'</td>'
-                +'<td>'+ data[i].text +'</td>'
+                +'<td>'+ data[i].contactName +'</td>'
+                +'<td>'+ data[i].contactLastName +'</td>'
+                +'<td>'+ data[i].contactNote +'</td>'
                 +'</tr>');
             }
 		},

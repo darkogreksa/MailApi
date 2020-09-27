@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import uns.ac.rs.MailApi.dto.ContactDTO;
 import uns.ac.rs.MailApi.entity.Contact;
 import uns.ac.rs.MailApi.entity.User;
+import uns.ac.rs.MailApi.lucene.Indexer;
+import uns.ac.rs.MailApi.lucene.model.IndexUnit;
 import uns.ac.rs.MailApi.service.ContactService;
 import uns.ac.rs.MailApi.service.PhotoService;
 import uns.ac.rs.MailApi.service.UserService;
@@ -77,11 +79,15 @@ public class ContactController {
         nContact.setNote(contact.getNote());
         nContact.setPhotos(new ArrayList<>());
         nContact.setUser(user);
+
+        IndexUnit indexUnit = new IndexUnit();
+        indexUnit.setContactName(contact.getFirstName());
+        indexUnit.setConcactLastName(contact.getLastName());
+        indexUnit.setContactNote(contact.getNote());
+        Indexer.getInstance().add(indexUnit.getLuceneDocument());
+
         nContact = contactService.save(nContact);
         return new ResponseEntity<>(HttpStatus.CREATED);
-
-
-
     }
 
     @CrossOrigin
