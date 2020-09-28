@@ -22,19 +22,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2fc145-fc1d-419f-8b74-b962819cecf1" name="Default Changelist" comment="res folder">
+    <list default="true" id="7a2fc145-fc1d-419f-8b74-b962819cecf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/IndexerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/IndexerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/IndexUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/IndexUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/mail/CrunchifyJavaMailExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/mail/CrunchifyJavaMailExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/handlers/PDFHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/handlers/PDFHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/search/ResultRetriever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/search/ResultRetriever.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/search/ResultRetriever.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/search/ResultRetriever.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/IndexUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/IndexUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/mail/CrunchifyJavaMailExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/mail/CrunchifyJavaMailExample.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601207688607</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished project">
+      <created>1601322555348</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601322555348</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -162,7 +176,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="res folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="res folder" />
+    <MESSAGE value="Finished project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601207388853">
@@ -177,30 +192,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="444" y="65" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1601224309381" />
-    <state width="1323" height="561" key="GridCell.Tab.0.bottom" timestamp="1601321635778">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1601322543962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="561" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
-    <state width="1323" height="561" key="GridCell.Tab.0.center" timestamp="1601321635778">
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1601322543962" />
+    <state width="1323" height="561" key="GridCell.Tab.0.bottom" timestamp="1601333007282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="561" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
-    <state width="1323" height="561" key="GridCell.Tab.0.left" timestamp="1601321635778">
+    <state width="1323" height="561" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601333007282" />
+    <state width="1323" height="561" key="GridCell.Tab.0.center" timestamp="1601333007281">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="561" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
-    <state width="1323" height="561" key="GridCell.Tab.0.right" timestamp="1601321635778">
+    <state width="1323" height="561" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601333007281" />
+    <state width="1323" height="561" key="GridCell.Tab.0.left" timestamp="1601333007280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="561" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
+    <state width="1323" height="561" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601333007280" />
+    <state width="1323" height="561" key="GridCell.Tab.0.right" timestamp="1601333007282">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="561" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601333007282" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1601214370050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1601214370050" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1601227157335">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1601322776139">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1601227157335" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1601322776139" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1601312802407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

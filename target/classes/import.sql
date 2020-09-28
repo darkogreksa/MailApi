@@ -30,6 +30,6 @@ INSERT INTO user_authority (user_id, authority_id) VALUES (2, 1);
 
 INSERT INTO tags (name, user) VALUES ("tag1", 1);
 
-INSERT INTO messages (message_from, message_to, bcc, cc, subject, content, account, unread, folder) VALUES ("greksadarko@gmail.com", "mailapi@gmail.com", "neko@gmail.com", "neko@gmail.com", "Subject 1", "Test 1", 1, true, 1);
-INSERT INTO messages (message_from, message_to, bcc, cc, subject, content, account, unread, folder) VALUES ("laza@gmail.com", "mailapi@gmail.com", "nesto@gmail.com", "neko@gmail.com", "Subject 2", "Test 2", 2, true, 1);
-INSERT INTO messages (message_from, message_to, bcc, cc, subject, content, account, unread, folder) VALUES ("nekotreci@gmail.com", "mailapi@gmail.com", "nesto@gmail.com", "neko@gmail.com", "Subject 3", "Test 3", 2, true, 1);
+INSERT INTO messages (message_from, message_to, bcc, cc, subject, content, account, unread, folder) VALUES ("greksadarko@gmail.com", "mailapi@gmail.com", "neko@gmail.com", "neko@gmail.com", "Naslov prve poruke", "Ovde stoji neki sadrzaj", 1, true, 1);
+INSERT INTO messages (message_from, message_to, bcc, cc, subject, content, account, unread, folder) VALUES ("laza@gmail.com", "mailapi@gmail.com", "nesto@gmail.com", "neko@gmail.com", "Naslov druge poruke", "I ovde ce biti neki sadrzaj", 1, true, 1);
+INSERT INTO messages (message_from, message_to, bcc, cc, subject, content, account, unread, folder) VALUES ("nekotreci@gmail.com", "mailapi@gmail.com", "nesto@gmail.com", "neko@gmail.com", "Naslov trece poruke", "Sadrzajjjjjjjjj", 1, true, 1);

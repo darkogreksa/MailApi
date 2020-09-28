@@ -99,7 +99,6 @@ public class IndexerController {
     			continue;
     		}
     		String filename = saveUploadedFile(file);
-    		System.out.println("FILEEEEEEENAME" + filename);
     		if (filename != null) {
     			model = pdf.getModel(new File(filename));
     		}
@@ -114,7 +113,6 @@ public class IndexerController {
             Path path = Paths.get(getResourceFilePath(DATA_DIR_PATH).getAbsolutePath() + File.separator + file.getOriginalFilename());
             Files.write(path, bytes);
             retVal = path.toString();
-            System.out.println("FILEE" + path);
         }
         return retVal;
     }
@@ -132,57 +130,23 @@ public class IndexerController {
                 indexUnit.setTitle(model.getTitle());
                 indexUnit.setText(model.getText());
                 indexUnit.setReceiver(model.getReceiver());
-//                indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
                 indexUnit.setSender(model.getSender());
-//                indexUnit.setLanguage(model.getLanguage());
                 Indexer.getInstance().add(indexUnit.getLuceneDocument());
-
 
                 Message message = new Message();
                 message.setSubject(model.getTitle());
                 message.setContent(model.getText());
                 message.setFrom(model.getSender());
                 message.setTo(model.getReceiver());
-
-//                eBook eBook = new eBook();
-//
-//                eBook.setTitle(model.getTitle());
-//                eBook.setAuthor(model.getAuthor());
-//                eBook.setKeywords(model.getKeywords());
-//                eBook.setCategory_id(model.getCategory());
-//                eBook.setLanguage_id(model.getLanguage());
-//
-//                eBook = eBookService.save(eBook);
             }
         }
     }
 
-//    @PutMapping(value="/index/update/{filename}")
-//    public ResponseEntity<UploadModel> update(@RequestBody UploadModel model, @PathVariable("filename") String filename){
-//    	String path = getResourceFilePath(DATA_DIR_PATH).getAbsolutePath() + "\\" + filename + ".pdf";
-//    	IndexUnit indexUnit = Indexer.getInstance().getHandler(path).getIndexUnit(new File(path));
-//    	
-//    	indexUnit.setTitle(model.getTitle());
-//    	indexUnit.setAuthor(model.getAuthor());
-//    	indexUnit.setKeywords(new ArrayList<String>(Arrays.asList(model.getKeywords().split(" "))));
-////    	indexUnit.setLanguage(model.getLanguage());
-//    	indexUnit.setCategory(model.getCategory());
-//    	
-//    	List<IndexableField> fields = new ArrayList<IndexableField>(Arrays.asList(indexUnit.getLuceneDocument().getField("title"),
-//    			indexUnit.getLuceneDocument().getField("author"), indexUnit.getLuceneDocument().getField("keyword"), indexUnit.getLuceneDocument().getField("language"), indexUnit.getLuceneDocument().getField("category")));
-//    	
-//    	Indexer.getInstance().updateDocument(path, fields);
-//    	
-//    	return new ResponseEntity<UploadModel>(model, HttpStatus.OK);
-//    }
-    
-    
     @GetMapping(value="/index/download/{filename}")
     public ResponseEntity<byte[]> download(@PathVariable("filename") String filename){
     	ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     	
     	URL url = classLoader.getResource(DATA_DIR_PATH + "/" + filename + ".pdf");
-    	System.out.println("URRRRRRRRRRRRRRL" + url);
     	File file = null;
     	try {
 			file = new File(url.getFile());
@@ -211,8 +175,6 @@ public class IndexerController {
 			// read file into bytes[]
 			fileInputStream = new FileInputStream(file);
 			fileInputStream.read(bytesArray);
-
-			System.out.println("INPUUUT" + file);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {

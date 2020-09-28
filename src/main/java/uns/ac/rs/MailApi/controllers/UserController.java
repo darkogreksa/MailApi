@@ -22,7 +22,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -30,8 +29,6 @@ public class UserController {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
-
 
     @GetMapping
     public List<UserDTO> getAllUsers() {
@@ -93,8 +90,6 @@ public class UserController {
         user = userService.save(user);
 
         return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.CREATED);
-
-
     }
 
     @PutMapping("/editProfile")

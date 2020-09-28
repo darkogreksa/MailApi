@@ -43,7 +43,7 @@ public class PDFHandler extends DocumentHandler {
 
             pdf.close();
         } catch (IOException e) {
-            System.out.println("Greksa pri konvertovanju dokumenta u pdf");
+            System.out.println("Greska pri konvertovanju dokumenta u pdf.");
         }
 
         return retVal;
@@ -58,7 +58,7 @@ public class PDFHandler extends DocumentHandler {
             String text = textStripper.getText(parser.getPDDocument());
             return text;
         } catch (IOException e) {
-            System.out.println("Greksa pri konvertovanju dokumenta u pdf");
+            System.out.println("Greska pri konvertovanju dokumenta u pdf.");
         }
         return null;
     }
@@ -69,7 +69,7 @@ public class PDFHandler extends DocumentHandler {
             String text = textStripper.getText(parser.getPDDocument());
             return text;
         } catch (IOException e) {
-            System.out.println("Greksa pri konvertovanju dokumenta u pdf");
+            System.out.println("Greska pri konvertovanju dokumenta u pdf.");
         }
         return null;
     }
@@ -88,10 +88,7 @@ public class PDFHandler extends DocumentHandler {
 			retVal.setTitle(title);
 			
 			String keywords = "" + information.getKeywords();
-//			retVal.setKeywords(keywords);
 			String author = "" + information.getAuthor();
-//			retVal.setAuthor(author);
-//			retVal.setFilename(file.getCanonicalPath());
 			
 			pdf.close();
 		} catch (Exception e) {
