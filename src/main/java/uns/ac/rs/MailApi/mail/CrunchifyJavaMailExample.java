@@ -49,7 +49,7 @@ public class CrunchifyJavaMailExample {
  
 		// Enter your correct gmail UserID and Password
 		// if you have 2FA enabled then provide App Specific Password
-		transport.connect("smtp.gmail.com", "vasmail@gmail.com", "vasa sifra");
+		transport.connect("smtp.gmail.com", "smorcinasmor@gmail.com", "smorcina12345");
 		transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
 		transport.close();
 	}

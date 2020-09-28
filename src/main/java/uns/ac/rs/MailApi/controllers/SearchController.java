@@ -33,7 +33,6 @@ public class SearchController {
         List<RequiredHighlight> rh = new ArrayList<RequiredHighlight>();
         rh.add(new RequiredHighlight(simpleQuery.getField(), simpleQuery.getValue()));
         List<ResultData> results = ResultRetriever.getResults(query, rh);
-        System.out.println("Authoooooooor" + results.toString());
         return new ResponseEntity<List<ResultData>>(results, HttpStatus.OK);
     }
 
@@ -106,7 +105,4 @@ public class SearchController {
         List<ResultData> results = ResultRetriever.getResults(query, rh);
         return new ResponseEntity<List<ResultData>>(results, HttpStatus.OK);
     }
-
-
-
 }

@@ -132,12 +132,6 @@ public class MessageController {
         } catch (IndexOutOfBoundsException ex) {
             return new ResponseEntity<>("Unexisting account!", HttpStatus.BAD_REQUEST);
         }
-
-        //Load new messages into DB
-//		for (Message message : mailAPI.loadMessages(userAccount)) {
-//			messageService.save(message);
-//		}
-
         List<MessageDTO> messages = new ArrayList<MessageDTO>();
 
         for (Message message : messageService.findAllUnread(userAccount)) {
@@ -213,14 +207,14 @@ public class MessageController {
             @RequestBody MessageDTO messageDTO,
             Principal principal) {
 
-        System.out.println("DA LI VAMO ULAZIS " + accountIndex + " " + messageDTO.toString() );
-
+        //IndexUnit klasa predstavlja model podataka koji ce se indeksirati i koji ce biti potrebni za pretragu
         IndexUnit indexUnit = new IndexUnit();
         indexUnit.setTitle(messageDTO.getSubject());
         indexUnit.setText(messageDTO.getContent());
         indexUnit.setReceiver(messageDTO.getTo().get(0).getEmail());
         indexUnit.setSender(messageDTO.getContent());
         indexUnit.setPdf(messageDTO.getSubject());
+        //getInstance predstavlja singleton
         Indexer.getInstance().add(indexUnit.getLuceneDocument());
         System.out.println(indexUnit.toString());
 
@@ -250,13 +244,6 @@ public class MessageController {
         message.setTo(MessageDTO.contactsToString(messageDTO.getTo()));
         message.setCc(MessageDTO.contactsToString(messageDTO.getCc()));
         message.setBcc(MessageDTO.contactsToString(messageDTO.getBcc()));
-
-
-
-
-
-
-        System.out.println("izasao");
         ArrayList<Attachment> attachments = new ArrayList<Attachment>();
 
         if (messageDTO.getAttachments().size() > 0) {
@@ -285,7 +272,6 @@ public class MessageController {
                 tag.setUser(user);
 
                 tags.add(tag);
-
             }
         }
 
@@ -297,35 +283,15 @@ public class MessageController {
         message.setFolder(folder);
         message.setUnread(true);
 
-
-
-
         // ----- Attempt to send an e-mail -----
         if (mailAPI.sendMessage(message)) {
             // ----- Saving to database -----
-
-
-
 
             message = messageService.save(message);
             return new ResponseEntity<MessageDTO>(new MessageDTO(message), HttpStatus.OK);
         } else
             return new ResponseEntity<MessageDTO>(new MessageDTO(message), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
-//    private String saveUploadedFile(MessageDTO file) throws IOException {
-//        String retVal = null;
-////        File files = new File();
-////        if (! file.isEmpty()) {
-//            byte[] bytes = file.toString().getBytes();
-//            System.out.println("bytes " + bytes + DATA_DIR_PATH);
-//            Path path = Paths.get(getResourceFilePath(DATA_DIR_PATH).getAbsolutePath());
-//            Files.write(path, bytes);
-//            retVal = path.toString();
-//            System.out.println("FILEE JEBENI " + path);
-////        }
-//        return retVal;
-//    }
 
     private File getResourceFilePath(String path) {
         URL url = this.getClass().getClassLoader().getResource(path);
@@ -408,7 +374,6 @@ public class MessageController {
         message.setFolder(folder);
         message.setUnread(true);
 
-        System.out.println("Usao u slanje poruke kontroler");
         // ----- Saving to database -----
         message = messageService.save(message);
 

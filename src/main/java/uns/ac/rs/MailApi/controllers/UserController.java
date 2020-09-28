@@ -150,18 +150,6 @@ public class UserController {
         }else {
             return new ResponseEntity<>("User with this username doesn't exists.", HttpStatus.UNAUTHORIZED);
         }
-
-
-
-
     }
-
-
-
-
-
-
-
-
 }
 

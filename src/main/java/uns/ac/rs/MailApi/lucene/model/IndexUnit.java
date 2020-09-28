@@ -88,7 +88,7 @@ public void setPdf(String pdf) {
     public Document getLuceneDocument(){
         Document retVal = new Document();
         if (title != null) {
-            System.out.println("kada se mejl indeksira" + title);
+            System.out.println("kada se mejl indeksira cuva u fajl sistemu indexfiles po kljucu" + title);
 
             retVal.add(new TextField("title", title, Store.YES));
             retVal.add(new TextField("sender", sender, Store.YES));

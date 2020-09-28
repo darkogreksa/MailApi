@@ -23,32 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a2fc145-fc1d-419f-8b74-b962819cecf1" name="Default Changelist" comment="res folder">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/contactSearch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/MessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/IndexUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/IndexUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/ResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/model/ResultData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/search/ResultRetriever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/lucene/search/ResultRetriever.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/ContactController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/MessageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/controllers/SearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/IndexUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/IndexUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/ResultData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/model/ResultData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/mail/CrunchifyJavaMailExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uns/ac/rs/MailApi/mail/CrunchifyJavaMailExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/import.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/search/ResultRetriever.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uns/ac/rs/MailApi/lucene/search/ResultRetriever.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,6 +145,9 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -189,22 +177,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="444" y="65" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1601224309381" />
-    <state width="1323" height="253" key="GridCell.Tab.0.bottom" timestamp="1601227100857">
+    <state width="1323" height="561" key="GridCell.Tab.0.bottom" timestamp="1601321635778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="253" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601227100857" />
-    <state width="1323" height="253" key="GridCell.Tab.0.center" timestamp="1601227100856">
+    <state width="1323" height="561" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
+    <state width="1323" height="561" key="GridCell.Tab.0.center" timestamp="1601321635778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="253" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601227100856" />
-    <state width="1323" height="253" key="GridCell.Tab.0.left" timestamp="1601227100856">
+    <state width="1323" height="561" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
+    <state width="1323" height="561" key="GridCell.Tab.0.left" timestamp="1601321635778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="253" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601227100856" />
-    <state width="1323" height="253" key="GridCell.Tab.0.right" timestamp="1601227100857">
+    <state width="1323" height="561" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
+    <state width="1323" height="561" key="GridCell.Tab.0.right" timestamp="1601321635778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="253" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601227100857" />
+    <state width="1323" height="561" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601321635778" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1601214370050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -213,6 +201,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1601227157335" />
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1601312802407">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1601312802407" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1601222848300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
